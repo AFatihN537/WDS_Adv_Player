@@ -60,7 +60,15 @@ export const baseAssets = {
     jugon_progress: "./jugon_progress/jugon_progress.skel",
     jugon_progress_atlas: "./jugon_progress/jugon_progress.atlas",
     sepia : "./sepia2.png",
-    whiteBlur : "./whiteBlurEffect.png",    
+    whiteBlur : "./whiteBlurEffect.png",
+    // dialog window
+    // window_dialog_pattern : "./dialog/frm_window_dialog_pattern.png",
+    // window_dialog_triangle : "./dialog/frm_window_dialog_triangle.png",
+    // window_dialog_icon_footprint : './dialog/img_window_dialog_icon_footprint.png',
+    // window_dialog_illust : './dialog/frm_window_dialog_illust.png',
+    // window_dialog_bg : './dialog/frm_window_dialog_bg_r40.png',
+    // common_btn_large_red : './dialog/btn_common_btn_large_red.png',
+    // common_btn_large : './dialog/btn_common_btn_large.png',
 };
 
 export const baseAssetsUrl = "https://raw.githubusercontent.com/wds-sirius/Adv-Resource/main";

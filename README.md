@@ -68,7 +68,8 @@ Or you can create a new TranslateReader in [translationReader.ts](./src/constant
 
 Audio now capture from streamFilter.
 
-> tip: use `--autoplay-policy=no-user-gesture-required` flag to allow auto play audio without user interaction in Chrome.
+> [!TIP]
+> use `--autoplay-policy=no-user-gesture-required` flag to allow auto play audio without user interaction in Chrome.
 
 ## Quick Start
 
