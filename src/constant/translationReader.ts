@@ -56,10 +56,37 @@ const zhaiReader: TranslateReader = {
     url: "https://wds-translation.littletoxic.top",
     font: {
         family: "Hiraginosansgb",
-        url: "./HiraginoSansGB.ttf",
+        url: "./HiraginoSansGB.otf",
     },
     read: function (epId: number) {
         return loadTranslateModelFromJson(`${this.url}/${epId}.json`, epId);
     },
 };
 TranslationController.addReader(zhaiReader);
+
+// id - Bahasa Indonesia
+const idReader: TranslateReader = {
+    language: "id",
+    url: "https://raw.githubusercontent.com/Ryota537/WDS-Translation-Csv/main",
+    font: {
+        family: "FiraSans",
+        url: "./FiraSans-Regular.ttf",
+    },
+    read: function (epId: number) {
+        return loadTranslateModel(`${this.url}/TranslationCsv/${epId}.csv`);
+    },
+};
+// Load the font
+if(idReader.font){
+    const customFont = new FontFace(
+        idReader.font.family,
+        `url(${idReader.font.url})`
+    );
+    customFont.load().then((font) => {
+        document.fonts.add(font);
+        console.log(`[Font Loader] Font ${idReader.font!.family} loaded!`);
+    }).catch((err) => {
+        console.error(`[Font Loader] Failed loading font:`, err);
+    });
+}
+TranslationController.addReader(idReader);
